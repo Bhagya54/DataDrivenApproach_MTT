@@ -11,7 +11,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="doLogin" invocation-numbers="0 1"/>
+          <include name="doLogin" invocation-numbers="1"/>
         </methods>
       </class> <!-- testcases.LoginTest -->
     </classes>

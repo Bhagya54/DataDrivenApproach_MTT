@@ -15,7 +15,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import extentlisteners.ExtentListeners;
@@ -35,7 +37,23 @@ public class BaseTest {
 	 * keyword
 	 * extent reports
 	 * 
+	 * Sequencial Approach
+	 * Open browser
+	 * testcase1
+	 * testcase2
+	 * .
+	 * .
+	 * tesctcase4
+	 * close browser
 	 * 
+	 * End to End Approach
+	 * open browser
+	 * testcase1
+	 * close browser
+	 * 
+	 * open browser
+	 * testcase2
+	 * close browser
 	 */
 	
 	public static WebDriver driver;
@@ -80,6 +98,10 @@ public class BaseTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		excel = new ExcelReader("./src/test/resources/excel/testData.xlsx");
+	}
+	@BeforeMethod
+	public void launchBrowser() {
 		
 		if(config.getProperty("browser").equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
@@ -97,7 +119,7 @@ public class BaseTest {
 		driver.get(config.getProperty("testsiteurl"));
 		log.info("Opened the site url " + config.getProperty("testsiteurl"));
 		
-		excel = new ExcelReader("./src/test/resources/excel/testData.xlsx");
+		
 		
 		
 	}
@@ -118,6 +140,7 @@ public class BaseTest {
 
 	public void type(String keyword, String value) {
 		try {
+		getWebElement(keyword).clear();
 		getWebElement(keyword).sendKeys(value);
 		log.info("Typed in the textbox: " + keyword + " with value as : " + value);
 		ExtentListeners.test.info("Typed in the textbox: " + keyword + " with value as : " + value);
@@ -148,10 +171,13 @@ public class BaseTest {
 		return ele;
 	}
 	
-	@AfterSuite
-	public void tearDown()
-	{
-		driver.quit();
-		
+	@AfterMethod
+	public void closeBrowser() {
+		driver.close();
 	}
+	/*
+	 * @AfterSuite public void tearDown() { driver.quit();
+	 * 
+	 * }
+	 */
 }

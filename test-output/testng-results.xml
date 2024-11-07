@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-05T13:27:23 IST" name="Learning TestNG" finished-at="2024-11-05T13:27:54 IST" duration-ms="31044">
+  <suite started-at="2024-11-07T12:22:35 IST" name="Learning TestNG" finished-at="2024-11-07T12:23:00 IST" duration-ms="25291">
     <groups>
     </groups>
-    <test started-at="2024-11-05T13:27:23 IST" name="Login Test" finished-at="2024-11-05T13:27:54 IST" duration-ms="31044">
+    <test started-at="2024-11-07T12:22:35 IST" name="Login Test" finished-at="2024-11-07T12:22:49 IST" duration-ms="13872">
       <class name="testcases.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.LoginTest@147a5d08]" started-at="2024-11-05T13:27:15 IST" name="setUp" finished-at="2024-11-05T13:27:23 IST" duration-ms="7434" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.LoginTest@2474f125]" started-at="2024-11-07T12:22:35 IST" name="launchBrowser" finished-at="2024-11-07T12:22:43 IST" duration-ms="7487" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="doLogin(java.lang.String,java.lang.String)[pri:0, instance:testcases.LoginTest@147a5d08]" started-at="2024-11-05T13:27:23 IST" name="doLogin" data-provider="Data" finished-at="2024-11-05T13:27:38 IST" duration-ms="15526" status="FAIL">
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="doLogin(java.lang.String,java.lang.String)[pri:0, instance:testcases.LoginTest@2474f125]" started-at="2024-11-07T12:22:43 IST" name="doLogin" data-provider="Data" finished-at="2024-11-07T12:22:43 IST" duration-ms="522" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[user1]]>
+                <![CDATA[username1]]>
               </value>
             </param>
             <param index="1">
@@ -24,68 +24,22 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[starts-with(@id,'_0_6')]"}
-  (Session info: chrome=118.0.5993.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f706b11e58c94f6403f1b378a55f5b6, findElement {using=xpath, value=//*[starts-with(@id,'_0_6')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.89, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52091/devtoo..., se:cdpVersion: 118.0.5993.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f706b11e58c94f6403f1b378a55f5b6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: no such element: Unable to locate element: {"method":"xpath","selector":"//*[starts-with(@id,'_0_6')]"}
-  (Session info: chrome=118.0.5993.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f706b11e58c94f6403f1b378a55f5b6, findElement {using=xpath, value=//*[starts-with(@id,'_0_6')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.89, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52091/devtoo..., se:cdpVersion: 118.0.5993.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f706b11e58c94f6403f1b378a55f5b6
-at org.testng.Assert.fail(Assert.java:111)
-at base.BaseTest.click(BaseTest.java:115)
-at testcases.LoginTest.doLogin(LoginTest.java:14)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method signature="doLogin(java.lang.String,java.lang.String)[pri:0, instance:testcases.LoginTest@147a5d08]" started-at="2024-11-05T13:27:38 IST" name="doLogin" data-provider="Data" finished-at="2024-11-05T13:27:54 IST" duration-ms="15367" status="FAIL">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.LoginTest@2474f125]" started-at="2024-11-07T12:22:43 IST" name="closeBrowser" finished-at="2024-11-07T12:22:43 IST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.LoginTest@2474f125]" started-at="2024-11-07T12:22:43 IST" name="launchBrowser" finished-at="2024-11-07T12:22:48 IST" duration-ms="5163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="doLogin(java.lang.String,java.lang.String)[pri:0, instance:testcases.LoginTest@2474f125]" started-at="2024-11-07T12:22:48 IST" name="doLogin" data-provider="Data" finished-at="2024-11-07T12:22:49 IST" duration-ms="397" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[user2]]>
+                <![CDATA[username2]]>
               </value>
             </param>
             <param index="1">
@@ -94,68 +48,70 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[starts-with(@id,'_0_6')]"}
-  (Session info: chrome=118.0.5993.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f706b11e58c94f6403f1b378a55f5b6, findElement {using=xpath, value=//*[starts-with(@id,'_0_6')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.89, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52091/devtoo..., se:cdpVersion: 118.0.5993.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f706b11e58c94f6403f1b378a55f5b6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: no such element: Unable to locate element: {"method":"xpath","selector":"//*[starts-with(@id,'_0_6')]"}
-  (Session info: chrome=118.0.5993.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.1', revision: '656257d8e9'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f706b11e58c94f6403f1b378a55f5b6, findElement {using=xpath, value=//*[starts-with(@id,'_0_6')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.89, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52091/devtoo..., se:cdpVersion: 118.0.5993.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f706b11e58c94f6403f1b378a55f5b6
-at org.testng.Assert.fail(Assert.java:111)
-at base.BaseTest.click(BaseTest.java:115)
-at testcases.LoginTest.doLogin(LoginTest.java:14)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testcases.LoginTest@147a5d08]" started-at="2024-11-05T13:27:54 IST" name="tearDown" finished-at="2024-11-05T13:27:55 IST" duration-ms="343" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.LoginTest@2474f125]" started-at="2024-11-07T12:22:49 IST" name="closeBrowser" finished-at="2024-11-07T12:22:49 IST" duration-ms="124" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
+        </test-method> <!-- closeBrowser -->
       </class> <!-- testcases.LoginTest -->
     </test> <!-- Login Test -->
+    <test started-at="2024-11-07T12:22:50 IST" name="User Reg Test" finished-at="2024-11-07T12:23:00 IST" duration-ms="10744">
+      <class name="testcases.UserReg">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testcases.UserReg@20435c40]" started-at="2024-11-07T12:22:34 IST" name="setUp" finished-at="2024-11-07T12:22:35 IST" duration-ms="669" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.UserReg@20435c40]" started-at="2024-11-07T12:22:50 IST" name="launchBrowser" finished-at="2024-11-07T12:22:55 IST" duration-ms="5132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="doUserReg(java.lang.String,java.lang.String)[pri:0, instance:testcases.UserReg@20435c40]" started-at="2024-11-07T12:22:55 IST" name="doUserReg" data-provider="Data" finished-at="2024-11-07T12:22:55 IST" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bhagya]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[k]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doUserReg -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.UserReg@20435c40]" started-at="2024-11-07T12:22:55 IST" name="closeBrowser" finished-at="2024-11-07T12:22:55 IST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcases.UserReg@20435c40]" started-at="2024-11-07T12:22:55 IST" name="launchBrowser" finished-at="2024-11-07T12:23:00 IST" duration-ms="5327" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method signature="doUserReg(java.lang.String,java.lang.String)[pri:0, instance:testcases.UserReg@20435c40]" started-at="2024-11-07T12:23:00 IST" name="doUserReg" data-provider="Data" finished-at="2024-11-07T12:23:00 IST" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[selenium]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[java]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doUserReg -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcases.UserReg@20435c40]" started-at="2024-11-07T12:23:00 IST" name="closeBrowser" finished-at="2024-11-07T12:23:00 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- testcases.UserReg -->
+    </test> <!-- User Reg Test -->
   </suite> <!-- Learning TestNG -->
 </testng-results>

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Learning_TestNG" class="navigator-link">
-              <span class="suite-name border-failed">Learning TestNG</span>
+              <span class="suite-name border-passed">Learning TestNG</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -55,7 +55,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Learning_TestNG" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,26 +92,36 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Learning_TestNG" class="hide-methods failed suite-Learning_TestNG"> (hide)</a> <!-- hide-methods failed suite-Learning_TestNG -->
-                      <a href="#" panel-name="suite-Learning_TestNG" class="show-methods failed suite-Learning_TestNG"> (show)</a> <!-- show-methods failed suite-Learning_TestNG -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Learning_TestNG" class="hide-methods passed suite-Learning_TestNG"> (hide)</a> <!-- hide-methods passed suite-Learning_TestNG -->
+                      <a href="#" panel-name="suite-Learning_TestNG" class="show-methods passed suite-Learning_TestNG"> (show)</a> <!-- show-methods passed suite-Learning_TestNG -->
                     </span>
-                    <div class="method-list-content failed suite-Learning_TestNG">
+                    <div class="method-list-content passed suite-Learning_TestNG">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Learning_TestNG" title="testcases.LoginTest" class="method navigator-link" hash-for-method="doLogin(user1, password1)">doLogin(user1, password1)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Learning_TestNG" title="testcases.LoginTest" class="method navigator-link" hash-for-method="doLogin(username1, password1)">doLogin(username1, password1)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Learning_TestNG" title="testcases.LoginTest" class="method navigator-link" hash-for-method="doLogin(user2, password2)">doLogin(user2, password2)</a> <!-- method navigator-link -->
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Learning_TestNG" title="testcases.LoginTest" class="method navigator-link" hash-for-method="doLogin(username2, password2)">doLogin(username2, password2)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Learning_TestNG -->
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Learning_TestNG" title="testcases.UserReg" class="method navigator-link" hash-for-method="doUserReg(bhagya, k)">doUserReg(bhagya, k)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Learning_TestNG" title="testcases.UserReg" class="method navigator-link" hash-for-method="doUserReg(selenium, java)">doUserReg(selenium, java)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Learning_TestNG -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -123,58 +133,54 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Learning_TestNG" class="panel Learning_TestNG">
-          <div class="suite-Learning_TestNG-class-failed">
+          <div class="suite-Learning_TestNG-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
+              <span class="class-name">testcases.UserReg</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="doUserReg(bhagya, k)">
+                  </a> <!-- doUserReg(bhagya, k) -->
+                  <span class="method-name">doUserReg</span>
+                  <span class="parameters">(bhagya,k)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="doUserReg(selenium, java)">
+                  </a> <!-- doUserReg(selenium, java) -->
+                  <span class="method-name">doUserReg</span>
+                  <span class="parameters">(selenium,java)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Learning_TestNG-class-passed -->
+          <div class="suite-Learning_TestNG-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">testcases.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="doLogin(user1, password1)">
-                  </a> <!-- doLogin(user1, password1) -->
+                  <a name="doLogin(username1, password1)">
+                  </a> <!-- doLogin(username1, password1) -->
                   <span class="method-name">doLogin</span>
-                  <span class="parameters">(user1,password1)</span>
-                  <div class="stack-trace">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[starts-with(@id,&apos;_0_6&apos;)]&quot;}
-  (Session info: chrome=118.0.5993.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f706b11e58c94f6403f1b378a55f5b6, findElement {using=xpath, value=//*[starts-with(@id,&apos;_0_6&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.89, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52091/devtoo..., se:cdpVersion: 118.0.5993.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f706b11e58c94f6403f1b378a55f5b6
-	at base.BaseTest.click(BaseTest.java:115)
-	at testcases.LoginTest.doLogin(LoginTest.java:14)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">(username1,password1)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="doLogin(user2, password2)">
-                  </a> <!-- doLogin(user2, password2) -->
+                  <a name="doLogin(username2, password2)">
+                  </a> <!-- doLogin(username2, password2) -->
                   <span class="method-name">doLogin</span>
-                  <span class="parameters">(user2,password2)</span>
-                  <div class="stack-trace">java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[starts-with(@id,&apos;_0_6&apos;)]&quot;}
-  (Session info: chrome=118.0.5993.89)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.23.1&apos;, revision: &apos;656257d8e9&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.4&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f706b11e58c94f6403f1b378a55f5b6, findElement {using=xpath, value=//*[starts-with(@id,&apos;_0_6&apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 118.0.5993.89, chrome: {chromedriverVersion: 118.0.5993.70 (e52f33f30b91..., userDataDir: C:\Users\91733\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52091}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52091/devtoo..., se:cdpVersion: 118.0.5993.89, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f706b11e58c94f6403f1b378a55f5b6
-	at base.BaseTest.click(BaseTest.java:115)
-	at testcases.LoginTest.doLogin(LoginTest.java:14)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
+                  <span class="parameters">(username2,password2)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Learning_TestNG-class-failed -->
+          </div> <!-- suite-Learning_TestNG-class-passed -->
         </div> <!-- panel Learning_TestNG -->
         <div panel-name="test-xml-Learning_TestNG" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -194,6 +200,11 @@ Session ID: 5f706b11e58c94f6403f1b378a55f5b6
       &lt;class name=&quot;testcases.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login Test --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;User Reg Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testcases.UserReg&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- User Reg Test --&gt;
 &lt;/suite&gt; &lt;!-- Learning TestNG --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -206,6 +217,9 @@ Session ID: 5f706b11e58c94f6403f1b378a55f5b6
             <ul>
               <li>
                 <span class="test-name">Login Test (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">User Reg Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -231,20 +245,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'doLogin')
 data.setCell(0, 2, 'testcases.LoginTest')
-data.setCell(0, 3, 15526);
+data.setCell(0, 3, 522);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'doLogin')
 data.setCell(1, 2, 'testcases.LoginTest')
-data.setCell(1, 3, 15367);
+data.setCell(1, 3, 397);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'doUserReg')
+data.setCell(2, 2, 'testcases.UserReg')
+data.setCell(2, 3, 4);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'doUserReg')
+data.setCell(3, 2, 'testcases.UserReg')
+data.setCell(3, 3, 2);
 window.suiteTableData['Learning_TestNG']= { tableData: data, tableDiv: 'times-div-Learning_TestNG'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 seconds</span>
+              <span class="suite-total-time">Total running time: 925 ms</span>
               <div id="times-div-Learning_TestNG">
               </div> <!-- times-div-Learning_TestNG -->
             </div> <!-- times-div -->
@@ -270,27 +292,65 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.UserReg</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser</span>
+                <span class="method-start">721 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">doLogin(user1, password1)</span>
-                <span class="method-start">7572 ms</span>
+                <span class="method-name">doLogin(username1, password1)</span>
+                <span class="method-start">8209 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">8737 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser</span>
+                <span class="method-start">8851 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">doLogin(user2, password2)</span>
-                <span class="method-start">23111 ms</span>
+                <span class="method-name">doLogin(username2, password2)</span>
+                <span class="method-start">14014 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-suite after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">39100 ms</span>
-              </div> <!-- configuration-suite after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">14414 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testcases.UserReg</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser</span>
+                <span class="method-start">15224 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">doUserReg(bhagya, k)</span>
+                <span class="method-start">20356 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">20366 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowser</span>
+                <span class="method-start">20488 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">doUserReg(selenium, java)</span>
+                <span class="method-start">25815 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">25822 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
