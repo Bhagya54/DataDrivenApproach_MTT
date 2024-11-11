@@ -5,15 +5,37 @@
     <listener class-name="extentlisteners.ExtentListeners"/>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
   </listeners>
-  <test thread-count="5" name="Login Test(failed)">
+  <test thread-count="5" name="Bank Manager Login Test(failed)">
     <classes>
-      <class name="testcases.LoginTest">
+      <class name="testcases.BankManagerLoginTest">
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="doLogin" invocation-numbers="1"/>
+          <include name="doBankMgrLogin"/>
         </methods>
-      </class> <!-- testcases.LoginTest -->
+      </class> <!-- testcases.BankManagerLoginTest -->
     </classes>
-  </test> <!-- Login Test(failed) -->
+  </test> <!-- Bank Manager Login Test(failed) -->
+  <test thread-count="5" name="Add Customer Test(failed)">
+    <classes>
+      <class name="testcases.AddCustomerTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="addCustomer"/>
+        </methods>
+      </class> <!-- testcases.AddCustomerTest -->
+    </classes>
+  </test> <!-- Add Customer Test(failed) -->
+  <test thread-count="5" name="Open Account Test(failed)">
+    <classes>
+      <class name="testcases.AddAccountTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="addAccount"/>
+        </methods>
+      </class> <!-- testcases.AddAccountTest -->
+    </classes>
+  </test> <!-- Open Account Test(failed) -->
 </suite> <!-- Failed suite [Learning TestNG] -->

@@ -13,11 +13,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
 import extentlisteners.ExtentListeners;
@@ -99,9 +98,7 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 		excel = new ExcelReader("./src/test/resources/excel/testData.xlsx");
-	}
-	@BeforeMethod
-	public void launchBrowser() {
+	
 		
 		if(config.getProperty("browser").equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
@@ -152,6 +149,23 @@ public class BaseTest {
 			Assert.fail(e.getMessage());
 		}
 	}
+	
+	public void select(String keyword, String value) {
+		try {
+			WebElement ele = getWebElement(keyword);
+		Select s = new Select(ele);
+		s.selectByVisibleText(value);
+		
+		log.info("Selected the dropdown: " + keyword + " with visisble text as : " + value);
+		ExtentListeners.test.info("Selected the dropdown: " + keyword + " with visisble text as : " + value);
+		}
+		catch (Exception e) {
+			log.error(e.getMessage());
+			log.error("Unable to select the value" + keyword);
+			ExtentListeners.test.fail(e.getMessage());
+			Assert.fail(e.getMessage());
+		}
+	}
 
 	public WebElement getWebElement(String keyword) {
 
@@ -171,13 +185,27 @@ public class BaseTest {
 		return ele;
 	}
 	
-	@AfterMethod
-	public void closeBrowser() {
-		driver.close();
+	public boolean isElementPresent(String keyword) {
+		
+		try {
+			getWebElement(keyword);
+			return true;
+		}
+		catch (Exception e) {
+			log.error(e.getMessage());
+			log.error("Unable to locate the element " + keyword);
+			ExtentListeners.test.fail(e.getMessage());
+			//Assert.fail(e.getMessage());
+			return false;
+		}
 	}
-	/*
-	 * @AfterSuite public void tearDown() { driver.quit();
-	 * 
-	 * }
-	 */
+	
+	
+	  @AfterSuite 
+	  public void tearDown() {
+		  
+		  driver.quit();
+	  
+	  }
+	 
 }
